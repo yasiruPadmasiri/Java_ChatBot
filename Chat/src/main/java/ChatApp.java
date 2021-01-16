@@ -51,14 +51,20 @@ class Chatbot extends JFrame {
                 if(e.getSource()==b) {                           // Message sents on Click button
 
                     String text=cf.getText().toLowerCase();
-                    ca.setForeground(Color.GREEN);
+                    ca.setForeground(Color.BLUE);
                     ca.append("You-->"+text+"\n");
                     cf.setText("");
 
                     if(text.contains("hi")) {                         // input Checking
                         replyMeth("Hi there");
                     }
+                    else if(text.contains("hello")) {                         // input Checking
+                        replyMeth(" Hello How Are you");
+                    }
                     else if(text.contains("how are you")) {
+                        replyMeth("I'm Good :).Thankyou for asking");
+                    }
+                    else if(text.contains(" Im Fine ")) {
                         replyMeth("I'm Good :).Thankyou for asking");
                     }
                     else if(text.contains("what is your name")) {
